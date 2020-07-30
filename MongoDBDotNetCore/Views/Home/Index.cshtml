@@ -1,0 +1,26 @@
+﻿@model List<MongoDBDotNetCore.Model.BlogPost>
+<div class="row">
+
+    @foreach (var post in Model)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">@post.Title</h5>
+                    <p class="card-text">
+                        @post.Content
+                    </p>
+                    <small>Created on @post.CreatedAt</small> 
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<br/>
+<hr/>
+<br/>
+<div>
+    <a class="btn btn-primary" href="/Home/Add">Create Post</a>
+</div>
